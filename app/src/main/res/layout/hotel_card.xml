@@ -105,6 +105,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="end"
                         android:text="Book"
+                        android:fontFamily="@font/rubik_medium"
                         card_view:cornerRadius="20dp"
                         card_view:layout_constraintBottom_toBottomOf="parent"
                         card_view:layout_constraintEnd_toEndOf="parent"
