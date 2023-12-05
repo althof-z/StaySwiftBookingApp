@@ -57,7 +57,7 @@
                 android:fontFamily="@font/rubik_medium"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:text="LogIn"
+                android:text="Login"
                 android:textColor="@color/colorWhite"
                 android:background="@drawable/rounded_button_background"/>
 
