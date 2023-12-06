@@ -1,17 +1,15 @@
 package com.example.hotelbookings
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.appcompat.app.AlertDialog
 import com.example.hotelbookings.data.DataHotel
 
-class HotelReservationActivity : AppCompatActivity() {
+class HotelDetailActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_hotel_reservation)
+        setContentView(R.layout.activity_hotel_detail)
 
         val backButton = findViewById<ImageView>(R.id.arrowBack)
         val backButtonHome = findViewById<ImageView>(R.id.HomeImageView)

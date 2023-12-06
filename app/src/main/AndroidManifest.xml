@@ -14,7 +14,7 @@
         android:theme="@style/Theme.HotelBookings"
         tools:targetApi="31">
         <activity
-            android:name=".HotelReservationActivity"
+            android:name=".HotelDetailActivity"
             android:exported="false" />
         <activity
             android:name=".RegisterActivity"
