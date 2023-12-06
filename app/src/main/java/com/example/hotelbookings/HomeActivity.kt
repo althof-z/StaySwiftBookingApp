@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -17,6 +18,13 @@ class HomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
+
+        // Retrieve user data from the intent
+        val username = intent.getStringExtra("USERNAME")
+
+        // Display user data in TextViews or other UI components
+        val usernameTextView: TextView = findViewById(R.id.namaUser)
+        usernameTextView.text ="$username"
 
         //======================================================================//
         // Inisialisasi RecyclerView
@@ -41,15 +49,9 @@ class HomeActivity : AppCompatActivity() {
         // Buat daftar objek Hotel dan kembalikan
         val hotels = mutableListOf<DataHotel>()
         // Tambahkan data hotel ke daftar
-        hotels.add(DataHotel("Hotel A", "Location A", "$120", R.drawable.jakarta))
-        hotels.add(DataHotel("Hotel B", "Location B", "$150", R.drawable.jakarta2))
-        hotels.add(DataHotel("Hotel C", "Location C", "$100", R.drawable.jakarta3))
-        hotels.add(DataHotel("Hotel A", "Location A", "$120", R.drawable.jakarta))
-        hotels.add(DataHotel("Hotel B", "Location B", "$150", R.drawable.jakarta2))
-        hotels.add(DataHotel("Hotel C", "Location C", "$100", R.drawable.jakarta3))
-        hotels.add(DataHotel("Hotel A", "Location A", "$120", R.drawable.jakarta))
-        hotels.add(DataHotel("Hotel B", "Location B", "$150", R.drawable.jakarta2))
-        hotels.add(DataHotel("Hotel C", "Location C", "$100", R.drawable.jakarta3))
+        hotels.add(DataHotel("Four Season Hotel", "Gatot Subroto, Jakarta", "Rp. 2,933,333", "In addition to the standard of Indonesia Care, all guests get free Wi-Fi in all rooms and free parking if arriving by car. Conveniently situated in the Gatot Subroto part of Jakarta, this property puts you close to attractions and interesting dining options. Don't leave before paying a visit to the famous National Monument (MONAS). Rated with 5 stars, this high-quality property provides guests with access to restaurant, fitness center and spa on-site.", R.drawable.fourseason))
+        hotels.add(DataHotel("Asyana Kemayoran", "Kemayoran, Jakarta - City Center", "Rp. 282,750", "The car parking and the Wi-Fi are always free, so you can stay in touch and come and go as you please. Strategically situated in Kemayoran, allowing you access and proximity to local attractions and sights. Don't leave before paying a visit to the famous National Monument (MONAS). Rated with 3 stars, this high-quality property provides guests with access to restaurant and indoor pool on-site.", R.drawable.asyanakemayoran))
+        hotels.add(DataHotel("Aryaduta Menteng", "Menteng, Jakarta", "Rp. 732,782", "In addition to the standard of Indonesia Care, all guests get free Wi-Fi in all rooms and free parking if arriving by car. Strategically situated in Menteng, allowing you access and proximity to local attractions and sights. Don't leave before paying a visit to the famous National Monument (MONAS). Rated with 5 stars, this high-quality property provides guests with access to restaurant, hot tub and outdoor pool on-site.", R.drawable.aryadutamenteng))
 
         return hotels
     }
@@ -77,6 +79,4 @@ class HomeActivity : AppCompatActivity() {
         startActivity(intent)
         finish()
     }
-
-
 }

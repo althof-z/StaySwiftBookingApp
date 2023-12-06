@@ -6,30 +6,90 @@
     android:layout_height="match_parent"
     tools:context=".HotelReservationActivity">
 
-    <!--Bottom Navigation-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-56dp">
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="42dp"
-        android:layout_height="42dp"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.046"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.026"
-        app:srcCompat="@drawable/arrowcircle" />
+        <ImageView
+            android:id="@+id/detailImageView"
+            android:layout_width="match_parent"
+            android:layout_height="270dp"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            tools:src="@drawable/asyanakemayoran" />
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/rubik_medium"
-        android:text="Hotel Booking"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/detailHotelNameTextView"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:fontFamily="@font/rubik_medium"
+            android:text="Nama Hotel"
+            android:textColor="#000000"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/detailImageView"
+            app:layout_constraintVertical_bias="0.444"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <TextView
+            android:id="@+id/detailHotelLocationTextView"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:fontFamily="@font/rubik"
+            android:text="Lokasi Detail Hotel"
+            android:textSize="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/detailHotelNameTextView"
+            app:layout_constraintVertical_bias="0.1"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <TextView
+            android:id="@+id/detailHotelPriceTextView"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:fontFamily="@font/rubik_medium"
+            android:text="Harga"
+            android:textColor="#000000"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/detailHotelLocationTextView"
+            app:layout_constraintVertical_bias="0.133"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <TextView
+            android:id="@+id/detailHotelDescriptionTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Deskripsi"
+            android:textSize="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/detailHotelPriceTextView"
+            app:layout_constraintVertical_bias="0.232"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <ImageView
+            android:id="@+id/arrowBack"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.041"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.022"
+            app:srcCompat="@drawable/ic_arrow_back" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -43,24 +103,11 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <ImageView
+            android:id="@+id/HomeImageView"
             android:layout_width="34dp"
             android:layout_height="34dp"
             android:layout_weight="1"
             android:src="@drawable/ic_home" />
-
-        <ImageView
-            android:layout_width="34dp"
-            android:layout_height="34dp"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/ic_calendar" />
-
-        <ImageView
-            android:id="@+id/logoutImageView"
-            android:layout_width="34dp"
-            android:layout_height="34dp"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/ic_exit" />
-
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

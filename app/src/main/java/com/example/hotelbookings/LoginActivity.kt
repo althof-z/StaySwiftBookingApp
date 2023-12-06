@@ -41,10 +41,11 @@ class LoginActivity : AppCompatActivity() {
         loginButton.setOnClickListener {
             val email = emailEditText.text.toString()
             val password = passwordEditText.text.toString()
+            val user = dbHelper.getUserByEmailAndPassword(email, password)
 
-            if (dbHelper.checkUser(email, password)) {
+            if (dbHelper.checkUser(email, password) && user != null) {
                 // Jika login berhasil
-                showSuccessDialog()
+                showSuccessDialog(user.username)
             } else {
                 // Jika login gagal
                 showFailureDialog()
@@ -58,14 +59,16 @@ class LoginActivity : AppCompatActivity() {
 
     }
 
-    private fun showSuccessDialog() {
+    private fun showSuccessDialog(username: String) {
         val builder = AlertDialog.Builder(this)
         builder.setTitle("Login Successful")
         builder.setMessage("You have successfully logged in.")
 
         builder.setPositiveButton("OK") { dialog, which ->
             // Intent ke halaman home atau halaman lainnya
-            val intent = Intent(this@LoginActivity, HomeActivity::class.java)
+            val intent = Intent(this@LoginActivity, HomeActivity::class.java).apply {
+                putExtra("USERNAME", username)
+            }
             startActivity(intent)
             finish()
         }

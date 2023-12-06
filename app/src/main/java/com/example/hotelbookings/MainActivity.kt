@@ -10,9 +10,9 @@ import androidx.viewpager.widget.ViewPager
 class MainActivity : AppCompatActivity() {
 
     private val imageResources = listOf(
-        R.drawable.jakarta,
-        R.drawable.jakarta2,
-        R.drawable.jakarta3
+        R.drawable.fourseason,
+        R.drawable.asyanakemayoran,
+        R.drawable.aryadutamenteng
         // Add more image resources as needed
     )
 

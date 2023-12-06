@@ -7,9 +7,11 @@ data class DataHotel (
     val name: String,
     val location: String,
     val price: String,
+    val description: String, // Tambahkan properti description
     val photo: Int = 0
 ) : Parcelable {
     constructor(parcel: Parcel) : this(
+        parcel.readString() ?: "",
         parcel.readString() ?: "",
         parcel.readString() ?: "",
         parcel.readString() ?: "",
@@ -20,6 +22,7 @@ data class DataHotel (
         parcel.writeString(name)
         parcel.writeString(location)
         parcel.writeString(price)
+        parcel.writeString(description)
         parcel.writeInt(photo)
     }
 

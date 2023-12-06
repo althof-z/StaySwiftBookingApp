@@ -3,6 +3,7 @@ import android.content.Context
 import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
+import com.example.hotelbookings.data.User
 
 //Database For User Login And Register
 class DatabaseHelper(context: Context) :
@@ -47,6 +48,7 @@ class DatabaseHelper(context: Context) :
 
         // Menyimpan data pengguna ke dalam tabel
         val success = db.insert(TABLE_USER, null, contentValues)
+
         db.close()
         return success
     }
@@ -68,6 +70,31 @@ class DatabaseHelper(context: Context) :
 
         return cursorCount > 0
     }
+
+    // Add this function in your DatabaseHelper
+    fun getUserByEmailAndPassword(email: String, password: String): User? {
+        val db = this.readableDatabase
+        val columns = arrayOf(COLUMN_USERNAME)
+        val selection = "$COLUMN_EMAIL = ? AND $COLUMN_PASSWORD =?"
+        val selectionArgs = arrayOf(email, password)
+
+        val cursor: Cursor = db.query(TABLE_USER, columns, selection, selectionArgs, null, null, null)
+
+        var user: User? = null
+
+        if (cursor.moveToFirst()) {
+            val usernameIndex = cursor.getColumnIndex(COLUMN_USERNAME)
+            val username = cursor.getString(usernameIndex)
+            user = User(username)
+        }
+
+        cursor.close()
+        db.close()
+
+        return user
+    }
+
+
 }
 
 
