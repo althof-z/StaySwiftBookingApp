@@ -1,5 +1,6 @@
 package com.example.hotelbookings.adapter
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -7,6 +8,7 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.hotelbookings.HotelReservationActivity
 import com.example.hotelbookings.R
 import com.example.hotelbookings.data.DataHotel
 
@@ -40,9 +42,15 @@ class HotelAdapter (private val hotels: List<DataHotel>):
         // Load image into ImageView
         holder.hotelPicture.setImageResource(hotel.photo)
 
-        // Implementasi tindakan ketika tombol "Book" ditekan (jika diperlukan)
+        // Implementasi tindakan ketika tombol "Book" ditekan
         holder.bookButton.setOnClickListener {
             // Lakukan sesuatu saat tombol "Book" ditekan
+
+            // Contoh: Start HotelReservationActivity
+            val intent = Intent(holder.itemView.context, HotelReservationActivity::class.java)
+            // Anda dapat menyertakan data tambahan jika diperlukan, misalnya hotel yang dipesan
+            intent.putExtra("selectedHotel", hotel)
+            holder.itemView.context.startActivity(intent)
         }
     }
 

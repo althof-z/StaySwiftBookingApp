@@ -107,6 +107,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="end"
                         android:text="Book"
+                        android:background="@drawable/rounded_button_background"
                         android:fontFamily="@font/rubik_medium"
                         card_view:cornerRadius="20dp"
                         card_view:layout_constraintBottom_toBottomOf="parent"

@@ -4,6 +4,7 @@ import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 
+//Database For User Login And Register
 class DatabaseHelper(context: Context) :
     SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION) {
 
@@ -68,3 +69,6 @@ class DatabaseHelper(context: Context) :
         return cursorCount > 0
     }
 }
+
+
+
