@@ -48,7 +48,7 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.09" />
+        app:layout_constraintVertical_bias="0.036" />
 
     <View
         android:id="@+id/borderedTextView"
@@ -62,7 +62,7 @@
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.218" />
+        app:layout_constraintVertical_bias="0.124" />
 
     <View
         android:id="@+id/borderedTextView2"
@@ -76,7 +76,7 @@
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.337" />
+        app:layout_constraintVertical_bias="0.273" />
 
     <View
         android:id="@+id/borderedTextView5"
@@ -104,7 +104,7 @@
         app:layout_constraintHorizontal_bias="0.871"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.442" />
+        app:layout_constraintVertical_bias="0.403" />
 
     <View
         android:id="@+id/borderedTextView3"
@@ -115,24 +115,25 @@
         android:padding="8dp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.124"
+        app:layout_constraintHorizontal_bias="0.128"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.442" />
+        app:layout_constraintVertical_bias="0.403" />
 
     <View
         android:id="@+id/borderedTextView7"
-        android:layout_width="350dp"
-        android:layout_height="160dp"
+        android:layout_marginTop="15dp"
+        android:layout_width="351dp"
+        android:layout_height="73dp"
         android:background="@drawable/border_textview"
         android:fontFamily="@font/rubik_medium"
         android:padding="8dp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintHorizontal_bias="0.516"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.771" />
+        app:layout_constraintVertical_bias="0.708" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -154,7 +155,7 @@
     </LinearLayout>
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/imgHotel"
         android:layout_width="75dp"
         android:layout_height="55dp"
         android:scaleType="fitXY"
@@ -250,21 +251,6 @@
         app:layout_constraintVertical_bias="0.388"
         app:srcCompat="@drawable/ic_calendar" />
 
-    <TextView
-        android:id="@+id/tvcheckin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="DD/MM/YY"
-        android:fontFamily="@font/rubik_medium"
-        android:textSize="12dp"
-        android:textColor="#000000"
-        app:layout_constraintBottom_toBottomOf="@+id/borderedTextView3"
-        app:layout_constraintEnd_toStartOf="@+id/imageView8"
-        app:layout_constraintHorizontal_bias="0.127"
-        app:layout_constraintStart_toStartOf="@+id/borderedTextView3"
-        app:layout_constraintTop_toTopOf="@+id/borderedTextView3"
-        app:layout_constraintVertical_bias="0.709" />
-
     <ImageView
         android:id="@+id/imageView9"
         android:layout_width="32dp"
@@ -281,39 +267,24 @@
         android:id="@+id/textView16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/rubik_medium"
         android:text="Check Out"
-        android:fontFamily="@font/rubik_medium"
         android:textColor="#000000"
         android:textSize="12dp"
         app:layout_constraintBottom_toBottomOf="@+id/borderedTextView4"
         app:layout_constraintEnd_toStartOf="@+id/imageView9"
-        app:layout_constraintHorizontal_bias="0.126"
+        app:layout_constraintHorizontal_bias="0.121"
         app:layout_constraintStart_toStartOf="@+id/borderedTextView4"
         app:layout_constraintTop_toTopOf="@+id/borderedTextView4"
-        app:layout_constraintVertical_bias="0.258" />
-
-    <TextView
-        android:id="@+id/tvcheckout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="DD/MM/YY"
-        android:fontFamily="@font/rubik_medium"
-        android:textSize="12dp"
-        android:textColor="#000000"
-        app:layout_constraintBottom_toBottomOf="@+id/borderedTextView4"
-        app:layout_constraintEnd_toStartOf="@+id/imageView9"
-        app:layout_constraintHorizontal_bias="0.115"
-        app:layout_constraintStart_toStartOf="@+id/borderedTextView4"
-        app:layout_constraintTop_toTopOf="@+id/borderedTextView4"
-        app:layout_constraintVertical_bias="0.806" />
+        app:layout_constraintVertical_bias="0.171" />
 
     <EditText
         android:id="@+id/editTextTextPersonName"
         android:layout_width="155dp"
         android:layout_height="50dp"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:hint="Name"
+        android:inputType="number"
+        android:hint="Person(Number)"
         android:fontFamily="@font/rubik_medium"
         android:textSize="15dp"
         android:textColor="#000000"
@@ -343,8 +314,8 @@
         android:layout_width="155dp"
         android:layout_height="50dp"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:hint="Name"
+        android:inputType="number"
+        android:hint="Person(Number)"
         android:fontFamily="@font/rubik_medium"
         android:textSize="15dp"
         android:textColor="#000000"
@@ -375,8 +346,9 @@
         android:id="@+id/textView20"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Messages"
+        android:text="Comments"
         android:textSize="12dp"
+        android:layout_marginTop="15dp"
         android:textColor="#000000"
         android:fontFamily="@font/rubik_medium"
         app:layout_constraintBottom_toTopOf="@+id/borderedTextView7"
@@ -390,13 +362,79 @@
         android:id="@+id/button"
         android:layout_width="350dp"
         android:layout_height="60dp"
-        android:textSize="18dp"
+        android:drawable="@drawable/rounded_button_background"
         android:fontFamily="@font/rubik_medium"
         android:text="Booking Room"
-        android:drawable="@drawable/rounded_button_background"
+        android:textSize="18dp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/borderedTextView7" />
+        app:layout_constraintTop_toBottomOf="@+id/borderedTextView7"
+        app:layout_constraintVertical_bias="0.648" />
+
+    <EditText
+        android:id="@+id/editTextTextMultiLine"
+        android:layout_width="350dp"
+        android:layout_height="70dp"
+        android:background="@android:color/transparent"
+        android:ems="10"
+        android:fontFamily="@font/rubik_medium"
+        android:textColor="#000000"
+        android:textSize="12dp"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        app:layout_constraintBottom_toBottomOf="@+id/borderedTextView7"
+        app:layout_constraintEnd_toEndOf="@+id/borderedTextView7"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/borderedTextView7"
+        app:layout_constraintTop_toTopOf="@+id/borderedTextView7"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName2"
+        android:layout_width="105dp"
+        android:layout_height="26dp"
+        android:ems="10"
+        android:inputType="date"
+        android:background="@android:color/transparent"
+        android:hint="Date"
+        android:fontFamily="@font/rubik_medium"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/borderedTextView3"
+        app:layout_constraintEnd_toStartOf="@+id/imageView8"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="@+id/borderedTextView3"
+        app:layout_constraintTop_toBottomOf="@+id/textView13"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName5"
+        android:layout_width="107dp"
+        android:layout_height="26dp"
+        android:ems="10"
+        android:inputType="date"
+        android:background="@android:color/transparent"
+        android:hint="Date"
+        android:fontFamily="@font/rubik_medium"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/borderedTextView4"
+        app:layout_constraintEnd_toStartOf="@+id/imageView9"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="@+id/borderedTextView4"
+        app:layout_constraintTop_toBottomOf="@+id/textView16"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/imageBackButton"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/borderedTextView"
+        app:layout_constraintEnd_toStartOf="@+id/textView4"
+        app:layout_constraintHorizontal_bias="0.242"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.253"
+        app:srcCompat="@drawable/ic_arrow_black" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

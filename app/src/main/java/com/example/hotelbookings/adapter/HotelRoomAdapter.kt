@@ -1,6 +1,5 @@
 package com.example.hotelbookings.adapter
 
-import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -13,6 +12,9 @@ import com.example.hotelbookings.data.DataHotelRoom
 
 class HotelRoomAdapter (private val rooms: List<DataHotelRoom>):
     RecyclerView.Adapter<HotelRoomAdapter.ViewHolder>() {
+
+    private var onBookButtonClickListener: OnBookButtonClickListener? = null
+
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         // Inisialisasi tampilan dari layout room_card
@@ -38,11 +40,24 @@ class HotelRoomAdapter (private val rooms: List<DataHotelRoom>):
         holder.roomDescTextView.text = room.description
         // Load image into ImageView
         holder.roomPicture.setImageResource(room.photo)
+
+        holder.itemView.findViewById<Button>(R.id.btn_book).setOnClickListener {
+            onBookButtonClickListener?.onBookButtonClick(position)
+        }
+
     }
 
     override fun getItemCount(): Int {
         // Kembalikan jumlah item dalam daftar room
         return rooms.size
+    }
+
+    interface OnBookButtonClickListener {
+        fun onBookButtonClick(position: Int)
+    }
+
+    fun setOnBookButtonClickListener(listener: OnBookButtonClickListener) {
+        this.onBookButtonClickListener = listener
     }
 
 }

@@ -4,6 +4,7 @@ import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.AdapterView
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
@@ -12,7 +13,7 @@ import com.example.hotelbookings.HotelDetailActivity
 import com.example.hotelbookings.R
 import com.example.hotelbookings.data.DataHotel
 
-class HotelAdapter (private val hotels: List<DataHotel>):
+class HotelAdapter (private val hotels: List<DataHotel>, private val listener: OnItemClickListener):
     RecyclerView.Adapter<HotelAdapter.ViewHolder>() {
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -52,11 +53,23 @@ class HotelAdapter (private val hotels: List<DataHotel>):
             intent.putExtra("selectedHotel", hotel)
             holder.itemView.context.startActivity(intent)
         }
+
+        //Kocak
+        // Implementasi tindakan ketika item di klik
+        holder.itemView.setOnClickListener {
+            listener.onItemClick(hotel)
+        }
+
     }
 
     override fun getItemCount(): Int {
         // Kembalikan jumlah item dalam daftar hotel
         return hotels.size
+    }
+
+    // Interface untuk handle item click
+    interface OnItemClickListener {
+        fun onItemClick(hotel: DataHotel)
     }
 
 }

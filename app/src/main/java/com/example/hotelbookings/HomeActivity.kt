@@ -32,7 +32,15 @@ class HomeActivity : AppCompatActivity() {
         recyclerView.layoutManager = LinearLayoutManager(this)
 
         // Inisialisasi Adapter dan atur ke RecyclerView
-        hotelAdapter = HotelAdapter(getHotelList())
+//        hotelAdapter = HotelAdapter(getHotelList())
+        hotelAdapter = HotelAdapter(getHotelList(), object : HotelAdapter.OnItemClickListener {
+            override fun onItemClick(hotel: DataHotel) {
+                // Handle item click, for example, start HotelDetailActivity
+                val intent = Intent(this@HomeActivity, HotelDetailActivity::class.java)
+                intent.putExtra("selectedHotel", hotel)
+                startActivity(intent)
+            }
+        })
         recyclerView.adapter = hotelAdapter
 
         // Find the ImageView for the logout button
@@ -42,6 +50,8 @@ class HomeActivity : AppCompatActivity() {
         logoutImageView.setOnClickListener {
             showLogoutConfirmationDialog()
         }
+
+        recyclerView.adapter = hotelAdapter
     }
 
     // Implementasikan metode getHotelList() untuk menyediakan daftar hotel
