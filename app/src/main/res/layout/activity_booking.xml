@@ -251,7 +251,7 @@
         app:srcCompat="@drawable/ic_calendar" />
 
     <TextView
-        android:id="@+id/textView15"
+        android:id="@+id/tvcheckin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="DD/MM/YY"
@@ -293,7 +293,7 @@
         app:layout_constraintVertical_bias="0.258" />
 
     <TextView
-        android:id="@+id/textView17"
+        android:id="@+id/tvcheckout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="DD/MM/YY"
@@ -317,7 +317,7 @@
         android:fontFamily="@font/rubik_medium"
         android:textSize="15dp"
         android:textColor="#000000"
-        android:background="null"
+        android:background="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="@+id/borderedTextView5"
         app:layout_constraintEnd_toEndOf="@+id/borderedTextView5"
         app:layout_constraintStart_toStartOf="@+id/borderedTextView5"
@@ -348,7 +348,7 @@
         android:fontFamily="@font/rubik_medium"
         android:textSize="15dp"
         android:textColor="#000000"
-        android:background="null"
+        android:background="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="@+id/borderedTextView6"
         app:layout_constraintEnd_toEndOf="@+id/borderedTextView6"
         app:layout_constraintHorizontal_bias="0.466"

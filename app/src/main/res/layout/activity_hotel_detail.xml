@@ -17,7 +17,7 @@
         <ImageView
             android:id="@+id/detailImageView"
             android:layout_width="match_parent"
-            android:layout_height="270dp"
+            android:layout_height="195dp"
             android:scaleType="fitXY"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -61,6 +61,7 @@
                 android:id="@+id/detailHotelLocationTextView"
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
+                android:layout_marginTop="2dp"
                 android:fontFamily="@font/rubik"
                 android:text="Lokasi Detail Hotel"
                 android:textSize="12sp"

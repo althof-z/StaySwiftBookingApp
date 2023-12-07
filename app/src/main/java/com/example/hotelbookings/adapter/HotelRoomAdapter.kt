@@ -20,7 +20,6 @@ class HotelRoomAdapter (private val rooms: List<DataHotelRoom>):
         val roomPriceTextView: TextView = itemView.findViewById(R.id.tv_roomPrice)
         val roomDescTextView: TextView = itemView.findViewById(R.id.tv_roomDesc)
         val roomPicture: ImageView = itemView.findViewById(R.id.iv_room)
-//        val roombookButton: Button = itemView.findViewById(R.id.btn_book)
     }
 
     // Override onCreateViewHolder, onBindViewHolder, getItemCount
@@ -39,17 +38,6 @@ class HotelRoomAdapter (private val rooms: List<DataHotelRoom>):
         holder.roomDescTextView.text = room.description
         // Load image into ImageView
         holder.roomPicture.setImageResource(room.photo)
-
-//        // Implementasi tindakan ketika tombol "Book" ditekan
-//        holder.bookButton.setOnClickListener {
-//            // Lakukan sesuatu saat tombol "Book" ditekan
-//
-//            // Contoh: Start roomReservationActivity
-//            val intent = Intent(holder.itemView.context, HotelDetailActivity::class.java)
-//            // Anda dapat menyertakan data tambahan jika diperlukan, misalnya room yang dipesan
-//            intent.putExtra("selectedroom", room)
-//            holder.itemView.context.startActivity(intent)
-//        }
     }
 
     override fun getItemCount(): Int {
