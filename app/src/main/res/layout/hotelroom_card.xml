@@ -56,7 +56,7 @@
                 card_view:layout_constraintEnd_toEndOf="parent"
                 card_view:layout_constraintStart_toEndOf="@+id/card_photo"
                 card_view:layout_constraintTop_toTopOf="@+id/card_photo"
-                tools:text="Judul" />
+                tools:text="Nama Hotel" />
 
             <TextView
                 android:id="@+id/tv_roomPrice"

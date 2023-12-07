@@ -1,12 +1,43 @@
 package com.example.hotelbookings.data
 
+import android.os.Parcel
 import android.os.Parcelable
-import kotlinx.android.parcel.Parcelize
 
-@Parcelize
-data class DataHotelRoom (
+data class DataHotelRoom(
     val name: String,
     val price: String,
-    val description: String, // Tambahkan properti description
+    val description: String, // Add the description property
     val photo: Int = 0
-) : Parcelable
+) : Parcelable {
+    // Implementing Parcelable interface requires a CREATOR field
+    companion object CREATOR : Parcelable.Creator<DataHotelRoom> {
+        override fun createFromParcel(parcel: Parcel): DataHotelRoom {
+            return DataHotelRoom(parcel)
+        }
+
+        override fun newArray(size: Int): Array<DataHotelRoom?> {
+            return arrayOfNulls(size)
+        }
+    }
+
+    // Secondary constructor for Parcelable
+    constructor(parcel: Parcel) : this(
+        parcel.readString() ?: "",
+        parcel.readString() ?: "",
+        parcel.readString() ?: "",
+        parcel.readInt()
+    )
+
+    // Override the describeContents() method
+    override fun describeContents(): Int {
+        return 0
+    }
+
+    // Override the writeToParcel() method
+    override fun writeToParcel(parcel: Parcel, flags: Int) {
+        parcel.writeString(name)
+        parcel.writeString(price)
+        parcel.writeString(description)
+        parcel.writeInt(photo)
+    }
+}

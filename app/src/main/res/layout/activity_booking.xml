@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BookingActivity">
+
+    <View
+        android:id="@+id/borderedTextView6"
+        android:layout_width="170dp"
+        android:layout_height="50dp"
+        android:background="@drawable/border_textview"
+        android:fontFamily="@font/rubik_medium"
+        android:padding="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.875"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.555" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/rubik_medium"
+        android:text="Hotel Selected"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/borderedTextView"
+        app:layout_constraintEnd_toEndOf="@+id/borderedTextView"
+        app:layout_constraintHorizontal_bias="0.032"
+        app:layout_constraintStart_toStartOf="@+id/borderedTextView"
+        app:layout_constraintTop_toTopOf="@+id/borderedTextView"
+        app:layout_constraintVertical_bias="0.194" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/rubik_medium"
+        android:text="Make Reservation"
+        android:textColor="@color/kindaBlue"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.09" />
+
+    <View
+        android:id="@+id/borderedTextView"
+        android:layout_width="350dp"
+        android:layout_height="70dp"
+        android:background="@drawable/border_textview"
+        android:fontFamily="@font/rubik_medium"
+        android:padding="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.218" />
+
+    <View
+        android:id="@+id/borderedTextView2"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:background="@drawable/border_textview"
+        android:fontFamily="@font/rubik_medium"
+        android:padding="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.337" />
+
+    <View
+        android:id="@+id/borderedTextView5"
+        android:layout_width="170dp"
+        android:layout_height="50dp"
+        android:background="@drawable/border_textview"
+        android:fontFamily="@font/rubik_medium"
+        android:padding="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.124"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.556" />
+
+    <View
+        android:id="@+id/borderedTextView4"
+        android:layout_width="170dp"
+        android:layout_height="50dp"
+        android:background="@drawable/border_textview"
+        android:fontFamily="@font/rubik_medium"
+        android:padding="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.871"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.442" />
+
+    <View
+        android:id="@+id/borderedTextView3"
+        android:layout_width="170dp"
+        android:layout_height="50dp"
+        android:background="@drawable/border_textview"
+        android:fontFamily="@font/rubik_medium"
+        android:padding="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.124"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.442" />
+
+    <View
+        android:id="@+id/borderedTextView7"
+        android:layout_width="350dp"
+        android:layout_height="160dp"
+        android:background="@drawable/border_textview"
+        android:fontFamily="@font/rubik_medium"
+        android:padding="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.771" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/colorWhite"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/HomeImageView"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_home" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="75dp"
+        android:layout_height="55dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="@+id/borderedTextView"
+        app:layout_constraintEnd_toEndOf="@+id/borderedTextView"
+        app:layout_constraintHorizontal_bias="0.96"
+        app:layout_constraintStart_toStartOf="@+id/borderedTextView"
+        app:layout_constraintTop_toTopOf="@+id/borderedTextView"
+        app:layout_constraintVertical_bias="0.6"
+        app:srcCompat="@drawable/asyanakemayoran" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/rubik_medium"
+        android:text="Hotel Selected"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/borderedTextView"
+        app:layout_constraintEnd_toEndOf="@+id/borderedTextView"
+        app:layout_constraintHorizontal_bias="0.032"
+        app:layout_constraintStart_toStartOf="@+id/borderedTextView"
+        app:layout_constraintTop_toTopOf="@+id/borderedTextView"
+        app:layout_constraintVertical_bias="0.194" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/rubik_medium"
+        android:text="Aryaduta Kemayoran, Jakarta"
+        android:textColor="@color/kindaBlue"
+        android:layout_marginTop="10dp"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/borderedTextView"
+        app:layout_constraintEnd_toEndOf="@+id/borderedTextView"
+        app:layout_constraintHorizontal_bias="0.039"
+        app:layout_constraintStart_toStartOf="@+id/borderedTextView"
+        app:layout_constraintTop_toTopOf="@+id/borderedTextView"
+        app:layout_constraintVertical_bias="0.6" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Type Of Room"
+        android:fontFamily="@font/rubik_medium"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/borderedTextView2"
+        app:layout_constraintEnd_toEndOf="@+id/borderedTextView2"
+        app:layout_constraintHorizontal_bias="0.023"
+        app:layout_constraintStart_toStartOf="@+id/borderedTextView2"
+        app:layout_constraintTop_toTopOf="@+id/borderedTextView2"
+        app:layout_constraintVertical_bias="0.548" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        app:layout_constraintBottom_toBottomOf="@+id/borderedTextView2"
+        app:layout_constraintEnd_toEndOf="@+id/borderedTextView2"
+        app:layout_constraintHorizontal_bias="0.949"
+        app:layout_constraintStart_toEndOf="@+id/textView12"
+        app:layout_constraintTop_toTopOf="@+id/borderedTextView2"
+        app:layout_constraintVertical_bias="0.611"
+        app:srcCompat="@drawable/ic_bed" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/rubik_medium"
+        android:text="Check In"
+        android:textColor="#000000"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/borderedTextView3"
+        app:layout_constraintEnd_toEndOf="@+id/borderedTextView3"
+        app:layout_constraintHorizontal_bias="0.058"
+        app:layout_constraintStart_toStartOf="@+id/borderedTextView3"
+        app:layout_constraintTop_toTopOf="@+id/borderedTextView3"
+        app:layout_constraintVertical_bias="0.2" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        app:layout_constraintBottom_toBottomOf="@+id/borderedTextView3"
+        app:layout_constraintEnd_toEndOf="@+id/borderedTextView3"
+        app:layout_constraintHorizontal_bias="0.857"
+        app:layout_constraintStart_toEndOf="@+id/textView13"
+        app:layout_constraintTop_toTopOf="@+id/borderedTextView3"
+        app:layout_constraintVertical_bias="0.388"
+        app:srcCompat="@drawable/ic_calendar" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DD/MM/YY"
+        android:fontFamily="@font/rubik_medium"
+        android:textSize="12dp"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/borderedTextView3"
+        app:layout_constraintEnd_toStartOf="@+id/imageView8"
+        app:layout_constraintHorizontal_bias="0.127"
+        app:layout_constraintStart_toStartOf="@+id/borderedTextView3"
+        app:layout_constraintTop_toTopOf="@+id/borderedTextView3"
+        app:layout_constraintVertical_bias="0.709" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        app:layout_constraintBottom_toBottomOf="@+id/borderedTextView4"
+        app:layout_constraintEnd_toEndOf="@+id/borderedTextView4"
+        app:layout_constraintHorizontal_bias="0.92"
+        app:layout_constraintStart_toStartOf="@+id/borderedTextView4"
+        app:layout_constraintTop_toTopOf="@+id/borderedTextView4"
+        app:layout_constraintVertical_bias="0.444"
+        app:srcCompat="@drawable/ic_calendar" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Check Out"
+        android:fontFamily="@font/rubik_medium"
+        android:textColor="#000000"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/borderedTextView4"
+        app:layout_constraintEnd_toStartOf="@+id/imageView9"
+        app:layout_constraintHorizontal_bias="0.126"
+        app:layout_constraintStart_toStartOf="@+id/borderedTextView4"
+        app:layout_constraintTop_toTopOf="@+id/borderedTextView4"
+        app:layout_constraintVertical_bias="0.258" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DD/MM/YY"
+        android:fontFamily="@font/rubik_medium"
+        android:textSize="12dp"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/borderedTextView4"
+        app:layout_constraintEnd_toStartOf="@+id/imageView9"
+        app:layout_constraintHorizontal_bias="0.115"
+        app:layout_constraintStart_toStartOf="@+id/borderedTextView4"
+        app:layout_constraintTop_toTopOf="@+id/borderedTextView4"
+        app:layout_constraintVertical_bias="0.806" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName"
+        android:layout_width="155dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Name"
+        android:fontFamily="@font/rubik_medium"
+        android:textSize="15dp"
+        android:textColor="#000000"
+        android:background="null"
+        app:layout_constraintBottom_toBottomOf="@+id/borderedTextView5"
+        app:layout_constraintEnd_toEndOf="@+id/borderedTextView5"
+        app:layout_constraintStart_toStartOf="@+id/borderedTextView5"
+        app:layout_constraintTop_toTopOf="@+id/borderedTextView5" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Adult"
+        android:fontFamily="@font/rubik_medium"
+        android:textColor="#000000"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/borderedTextView5"
+        app:layout_constraintEnd_toEndOf="@+id/borderedTextView5"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/borderedTextView5"
+        app:layout_constraintTop_toBottomOf="@+id/borderedTextView3"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName3"
+        android:layout_width="155dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Name"
+        android:fontFamily="@font/rubik_medium"
+        android:textSize="15dp"
+        android:textColor="#000000"
+        android:background="null"
+        app:layout_constraintBottom_toBottomOf="@+id/borderedTextView6"
+        app:layout_constraintEnd_toEndOf="@+id/borderedTextView6"
+        app:layout_constraintHorizontal_bias="0.466"
+        app:layout_constraintStart_toStartOf="@+id/borderedTextView6"
+        app:layout_constraintTop_toTopOf="@+id/borderedTextView6"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Children"
+        android:fontFamily="@font/rubik_medium"
+        android:textColor="#000000"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/borderedTextView6"
+        app:layout_constraintEnd_toEndOf="@+id/borderedTextView6"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/borderedTextView6"
+        app:layout_constraintTop_toBottomOf="@+id/borderedTextView4"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Messages"
+        android:textSize="12dp"
+        android:textColor="#000000"
+        android:fontFamily="@font/rubik_medium"
+        app:layout_constraintBottom_toTopOf="@+id/borderedTextView7"
+        app:layout_constraintEnd_toEndOf="@+id/borderedTextView7"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/borderedTextView7"
+        app:layout_constraintTop_toBottomOf="@+id/borderedTextView5"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="350dp"
+        android:layout_height="60dp"
+        android:textSize="18dp"
+        android:fontFamily="@font/rubik_medium"
+        android:text="Booking Room"
+        android:drawable="@drawable/rounded_button_background"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/borderedTextView7" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.widget.Button
 import androidx.viewpager.widget.ViewPager
+import com.example.hotelbookings.adapter.SlideAdapter
 
 class MainActivity : AppCompatActivity() {
 

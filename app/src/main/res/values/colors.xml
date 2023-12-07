@@ -6,4 +6,5 @@
     <color name="colorPrimaryVariant">#3700B3</color>
     <color name="colorWhite">#FFFFFFFF</color>
     <color name="kindaBlue">#3081D0</color>
+    <color name="grey">#A9A9A9</color>
 </resources>
