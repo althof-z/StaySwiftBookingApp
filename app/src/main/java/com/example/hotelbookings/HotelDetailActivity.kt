@@ -1,12 +1,13 @@
 package com.example.hotelbookings
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.hotelbookings.adapter.HotelAdapter
 import com.example.hotelbookings.adapter.HotelRoomAdapter
 import com.example.hotelbookings.data.DataHotel
 import com.example.hotelbookings.data.DataHotelRoom
@@ -14,6 +15,7 @@ import com.example.hotelbookings.data.DataHotelRoom
 class HotelDetailActivity : AppCompatActivity() {
     private lateinit var roomRecyclerView: RecyclerView
     private lateinit var roomAdapter: HotelRoomAdapter
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_hotel_detail)
@@ -57,6 +59,17 @@ class HotelDetailActivity : AppCompatActivity() {
             hotelDescriptionTextView.text = it.description
         }
 
+        //Method for Click
+        roomAdapter.setOnBookButtonClickListener(object : HotelRoomAdapter.OnBookButtonClickListener {
+            override fun onBookButtonClick(position: Int) {
+                // Handle the click event here, for example, navigate to a new activity
+                val intent = Intent(this@HotelDetailActivity, BookingActivity::class.java)
+                // Add any necessary data to the intent
+                startActivity(intent)
+            }
+        })
+
+
     }
 
     // Implementasikan metode getHotelList() untuk menyediakan daftar hotel
@@ -67,8 +80,8 @@ class HotelDetailActivity : AppCompatActivity() {
         // Tambahkan data hotel ke daftar
         if(selectedHotel?.name == "Four Season Hotel"){
             rooms.add(DataHotelRoom("Deluxe Room","Rp.2,999,933","2 Bedroom, 2 Bathroom, 1 Kitchen",R.drawable.fourseason))
-            rooms.add(DataHotelRoom("Deluxe Room","Rp.2,999,933","2 Bedroom, 2 Bathroom, 1 Kitchen",R.drawable.fourseason))
-            rooms.add(DataHotelRoom("Deluxe Room","Rp.2,999,933","2 Bedroom, 2 Bathroom, 1 Kitchen",R.drawable.fourseason))
+            rooms.add(DataHotelRoom("Regular Room","Rp.2,999,933","2 Bedroom, 2 Bathroom, 1 Kitchen",R.drawable.fourseason))
+            rooms.add(DataHotelRoom("Small Room","Rp.2,999,933","2 Bedroom, 2 Bathroom, 1 Kitchen",R.drawable.fourseason))
         }else if(selectedHotel?.name == "Asyana Kemayoran"){
             rooms.add(DataHotelRoom("Deluxe Room","Rp. 287,000","1 Bedroom, 1 Bathroom",R.drawable.asyanakemayoran))
             rooms.add(DataHotelRoom("Deluxe Room","Rp. 287,000","1 Bedroom, 1 Bathroom",R.drawable.asyanakemayoran))
