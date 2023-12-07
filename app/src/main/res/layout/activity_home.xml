@@ -118,6 +118,12 @@
             android:src="@drawable/ic_home" />
 
         <ImageView
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_add" />
+
+        <ImageView
             android:id="@+id/logoutImageView"
             android:layout_width="34dp"
             android:layout_height="34dp"

@@ -37,10 +37,13 @@
         <entry key="..\:/MobileProgramming/HotelBookingApp/Kelompok4/app/src/main/res/menu/bottom_navi_menu.xml" value="0.37083333333333335" />
         <entry key="..\:/MobileProgramming/HotelBookingApp/Kelompok4/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.371875" />
         <entry key="..\:/MobileProgramming/HotelBookingApp/Kelompok4Bareng/StaySwiftBookingApp/app/src/main/res/drawable/border_textview.xml" value="0.2435" />
+        <entry key="..\:/MobileProgramming/HotelBookingApp/Kelompok4Bareng/StaySwiftBookingApp/app/src/main/res/drawable/ic_add.xml" value="0.2435" />
         <entry key="..\:/MobileProgramming/HotelBookingApp/Kelompok4Bareng/StaySwiftBookingApp/app/src/main/res/drawable/ic_calendar.xml" value="0.2435" />
+        <entry key="..\:/MobileProgramming/HotelBookingApp/Kelompok4Bareng/StaySwiftBookingApp/app/src/main/res/drawable/ic_exit.xml" value="0.2435" />
         <entry key="..\:/MobileProgramming/HotelBookingApp/Kelompok4Bareng/StaySwiftBookingApp/app/src/main/res/drawable/ic_home.xml" value="0.2435" />
         <entry key="..\:/MobileProgramming/HotelBookingApp/Kelompok4Bareng/StaySwiftBookingApp/app/src/main/res/drawable/ic_person.xml" value="0.2435" />
         <entry key="..\:/MobileProgramming/HotelBookingApp/Kelompok4Bareng/StaySwiftBookingApp/app/src/main/res/drawable/rounded_button_background.xml" value="0.2435" />
+        <entry key="..\:/MobileProgramming/HotelBookingApp/Kelompok4Bareng/StaySwiftBookingApp/app/src/main/res/drawable/splash_background.xml" value="0.2435" />
         <entry key="..\:/MobileProgramming/HotelBookingApp/Kelompok4Bareng/StaySwiftBookingApp/app/src/main/res/layout/activity_booking.xml" value="0.33" />
         <entry key="..\:/MobileProgramming/HotelBookingApp/Kelompok4Bareng/StaySwiftBookingApp/app/src/main/res/layout/activity_details.xml" value="0.2875905797101449" />
         <entry key="..\:/MobileProgramming/HotelBookingApp/Kelompok4Bareng/StaySwiftBookingApp/app/src/main/res/layout/activity_home.xml" value="0.33" />
@@ -49,6 +52,7 @@
         <entry key="..\:/MobileProgramming/HotelBookingApp/Kelompok4Bareng/StaySwiftBookingApp/app/src/main/res/layout/activity_login.xml" value="0.2875905797101449" />
         <entry key="..\:/MobileProgramming/HotelBookingApp/Kelompok4Bareng/StaySwiftBookingApp/app/src/main/res/layout/activity_main.xml" value="0.2875905797101449" />
         <entry key="..\:/MobileProgramming/HotelBookingApp/Kelompok4Bareng/StaySwiftBookingApp/app/src/main/res/layout/activity_register.xml" value="0.2875905797101449" />
+        <entry key="..\:/MobileProgramming/HotelBookingApp/Kelompok4Bareng/StaySwiftBookingApp/app/src/main/res/layout/activity_splash.xml" value="0.28785131459655483" />
         <entry key="..\:/MobileProgramming/HotelBookingApp/Kelompok4Bareng/StaySwiftBookingApp/app/src/main/res/layout/hotel_card.xml" value="0.2875905797101449" />
         <entry key="..\:/MobileProgramming/HotelBookingApp/Kelompok4Bareng/StaySwiftBookingApp/app/src/main/res/layout/hotelroom_card.xml" value="0.4252651880424301" />
         <entry key="..\:/MobileProgramming/HotelBookingApp/Kelompok4Bareng/StaySwiftBookingApp/app/src/main/res/layout/item_slide.xml" value="0.2875905797101449" />
