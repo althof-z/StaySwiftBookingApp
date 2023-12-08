@@ -15,6 +15,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="550dp"
+        android:background="#F5F5F5"
         android:padding="8dp">
 
         <TextView
@@ -22,7 +23,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/rubik_medium"
-            android:text="Username (Name)"
+            android:hint="Username (Name)"
             android:textColor="#000000"
             android:textSize="25dp"
             card_view:layout_constraintBottom_toBottomOf="parent"
@@ -37,8 +38,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/rubik_medium"
-            android:text="Email"
-            android:textColor="#000000"
+            android:hint="Email"
+            android:textColor="@color/kindaBlue"
             android:textSize="18dp"
             card_view:layout_constraintBottom_toBottomOf="parent"
             card_view:layout_constraintEnd_toEndOf="parent"
@@ -109,16 +110,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="52dp"
-            android:text="Hotel:"
             android:fontFamily="@font/rubik_medium"
+            android:text="Hotel:"
             android:textColor="#000000"
             android:textSize="15dp"
             card_view:layout_constraintBottom_toBottomOf="parent"
             card_view:layout_constraintEnd_toEndOf="parent"
-            card_view:layout_constraintHorizontal_bias="0.047"
+            card_view:layout_constraintHorizontal_bias="0.045"
             card_view:layout_constraintStart_toStartOf="parent"
             card_view:layout_constraintTop_toBottomOf="@+id/textView8"
-            card_view:layout_constraintVertical_bias="0.0" />
+            card_view:layout_constraintVertical_bias="0.013" />
 
         <TextView
             android:id="@+id/textView14"
@@ -139,8 +140,8 @@
             android:id="@+id/textView15"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Price:"
             android:fontFamily="@font/rubik_medium"
+            android:text="Price:"
             android:textColor="#000000"
             android:textSize="15dp"
             card_view:layout_constraintBottom_toBottomOf="parent"
@@ -149,6 +150,22 @@
             card_view:layout_constraintStart_toStartOf="parent"
             card_view:layout_constraintTop_toBottomOf="@+id/textView14"
             card_view:layout_constraintVertical_bias="0.079" />
+
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/rubik_medium"
+            android:text="Comments"
+            android:textColor="#000000"
+            android:textSize="15dp"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintHorizontal_bias="0.047"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintTop_toBottomOf="@+id/textView10"
+            card_view:layout_constraintVertical_bias="0.1" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.cardview.widget.CardView>

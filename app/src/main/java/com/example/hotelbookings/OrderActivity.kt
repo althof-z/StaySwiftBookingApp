@@ -13,20 +13,17 @@ class OrderActivity : AppCompatActivity() {
 
         // Intent Navigation Bottom
         val logoutImageView = findViewById<ImageView>(R.id.logoutImageView)
-        val homeImageView = findViewById<ImageView>(R.id.homeImageView)
+        val backButton: ImageView = findViewById(R.id.imageView3)
 
         // Set OnClickListener for the logout ImageView
         logoutImageView.setOnClickListener {
             showLogoutConfirmationDialog()
         }
 
-        // Set OnClickListener for the home ImageView
-        homeImageView.setOnClickListener {
-            navigateToHomeActivity()
+        backButton.setOnClickListener {
+            // Handle the back button click
+            onBackPressed()
         }
-
-        // Add your logic for adding data here
-
     }
 
     private fun showLogoutConfirmationDialog() {
@@ -57,6 +54,12 @@ class OrderActivity : AppCompatActivity() {
         // Start the HomeActivity
         val intent = Intent(this, HomeActivity::class.java)
         startActivity(intent)
+    }
+
+    @Suppress("DEPRECATION")
+    override fun onBackPressed() {
+        // Add your custom logic here, or call super.onBackPressed() to close the activity
+        super.onBackPressed()
     }
 
 }
