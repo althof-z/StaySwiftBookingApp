@@ -118,6 +118,7 @@
             android:src="@drawable/ic_home" />
 
         <ImageView
+            android:id="@+id/addImageView"
             android:layout_width="34dp"
             android:layout_height="34dp"
             android:layout_weight="1"

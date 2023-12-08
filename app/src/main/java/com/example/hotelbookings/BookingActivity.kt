@@ -2,8 +2,7 @@ package com.example.hotelbookings
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.ImageView
-import android.widget.TextView
+import android.widget.*
 import com.squareup.picasso.Picasso
 
 class BookingActivity : AppCompatActivity() {
@@ -30,9 +29,6 @@ class BookingActivity : AppCompatActivity() {
         roomHotelLocationTextView.text = selectedRoomHotelLocatiom
 
         Picasso.get().load(selectedRoomImage).into(roomImageView)
-
-//        hotelNameTextView.text = selectedHotelName
-//        hotelLocationTextView.text = selectedHotelLocation
 
         val backButton= findViewById<ImageView>(R.id.imageBackButton)
         val backButtonHome = findViewById<ImageView>(R.id.HomeImageView)

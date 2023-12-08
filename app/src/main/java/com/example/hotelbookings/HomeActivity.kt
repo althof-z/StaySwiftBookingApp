@@ -43,12 +43,20 @@ class HomeActivity : AppCompatActivity() {
         })
         recyclerView.adapter = hotelAdapter
 
-        // Find the ImageView for the logout button
+        // Intent Navigation Bottom
         val logoutImageView = findViewById<ImageView>(R.id.logoutImageView)
+        val addButton = findViewById<ImageView>(R.id.addImageView)
 
         // Set OnClickListener for the logout ImageView
         logoutImageView.setOnClickListener {
             showLogoutConfirmationDialog()
+        }
+
+        // Set OnClickListener for the add Button
+        addButton.setOnClickListener {
+            // Handle add button click, for example, start AddActivity
+            val intent = Intent(this@HomeActivity, OrderActivity::class.java)
+            startActivity(intent)
         }
 
         recyclerView.adapter = hotelAdapter

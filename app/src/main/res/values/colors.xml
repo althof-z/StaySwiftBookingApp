@@ -7,4 +7,6 @@
     <color name="colorWhite">#FFFFFFFF</color>
     <color name="kindaBlue">#3081D0</color>
     <color name="grey">#A9A9A9</color>
+    <color name="red">#F31559</color>
+    <color name="green">#65B741</color>
 </resources>

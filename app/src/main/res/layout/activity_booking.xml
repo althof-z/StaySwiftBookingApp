@@ -279,7 +279,7 @@
         app:layout_constraintVertical_bias="0.171" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/adultNum"
         android:layout_width="155dp"
         android:layout_height="50dp"
         android:ems="10"
@@ -310,7 +310,7 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName3"
+        android:id="@+id/childrenNum"
         android:layout_width="155dp"
         android:layout_height="50dp"
         android:ems="10"
@@ -374,7 +374,7 @@
         app:layout_constraintVertical_bias="0.648" />
 
     <EditText
-        android:id="@+id/editTextTextMultiLine"
+        android:id="@+id/commentsText"
         android:layout_width="350dp"
         android:layout_height="70dp"
         android:background="@android:color/transparent"
@@ -392,7 +392,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/dateCheckIn"
         android:layout_width="105dp"
         android:layout_height="26dp"
         android:ems="10"
@@ -409,7 +409,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName5"
+        android:id="@+id/dateCheckOut"
         android:layout_width="107dp"
         android:layout_height="26dp"
         android:ems="10"
