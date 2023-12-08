@@ -15,7 +15,6 @@ class HotelRoomAdapter (private val rooms: List<DataHotelRoom>):
 
     private var onBookButtonClickListener: OnBookButtonClickListener? = null
 
-
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         // Inisialisasi tampilan dari layout room_card
         val roomNameTextView: TextView = itemView.findViewById(R.id.tv_roomName)
@@ -58,6 +57,10 @@ class HotelRoomAdapter (private val rooms: List<DataHotelRoom>):
 
     fun setOnBookButtonClickListener(listener: OnBookButtonClickListener) {
         this.onBookButtonClickListener = listener
+    }
+
+    fun getRoomAt(position: Int): DataHotelRoom {
+        return rooms[position]
     }
 
 }

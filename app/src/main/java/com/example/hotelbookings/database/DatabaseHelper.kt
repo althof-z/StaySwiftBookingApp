@@ -6,7 +6,7 @@ import android.database.sqlite.SQLiteOpenHelper
 import com.example.hotelbookings.data.BookingInfo
 import com.example.hotelbookings.data.User
 
-//Database For User Login And Register
+//Database For User Login And Register and Booking
 class DatabaseHelper(context: Context) :
     SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION) {
 

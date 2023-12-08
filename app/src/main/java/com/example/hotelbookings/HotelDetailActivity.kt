@@ -3,7 +3,6 @@ package com.example.hotelbookings
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -62,9 +61,23 @@ class HotelDetailActivity : AppCompatActivity() {
         //Method for Click
         roomAdapter.setOnBookButtonClickListener(object : HotelRoomAdapter.OnBookButtonClickListener {
             override fun onBookButtonClick(position: Int) {
+                // Get the selected room
+                val selectedRoom = roomAdapter.getRoomAt(position)
+
                 // Handle the click event here, for example, navigate to a new activity
                 val intent = Intent(this@HotelDetailActivity, BookingActivity::class.java)
                 // Add any necessary data to the intent
+                // Pass data to BookingActivity using putExtra
+                intent.putExtra("selectedRoomName", selectedRoom.name)
+                intent.putExtra("selectedRoomImage", selectedRoom.photo)
+                intent.putExtra("selectedHotelName", selectedRoom.nameHotel)
+                intent.putExtra("selectedHotelLocation", selectedRoom.location)
+
+                // Pass hotel name and location from the selectedHotel
+//                val selectedHotel = intent.getParcelableExtra<DataHotel>("selectedHotel")
+//                intent.putExtra("selectedHotelName", selectedHotel?.name)
+//                intent.putExtra("selectedHotelLocation", selectedHotel?.location)
+
                 startActivity(intent)
             }
         })
@@ -79,17 +92,17 @@ class HotelDetailActivity : AppCompatActivity() {
         val selectedHotel = intent.getParcelableExtra<DataHotel>("selectedHotel")
         // Tambahkan data hotel ke daftar
         if(selectedHotel?.name == "Four Season Hotel"){
-            rooms.add(DataHotelRoom("Deluxe Room","Rp.2,999,933","2 Bedroom, 2 Bathroom, 1 Kitchen",R.drawable.fourseason))
-            rooms.add(DataHotelRoom("Regular Room","Rp.2,999,933","2 Bedroom, 2 Bathroom, 1 Kitchen",R.drawable.fourseason))
-            rooms.add(DataHotelRoom("Small Room","Rp.2,999,933","2 Bedroom, 2 Bathroom, 1 Kitchen",R.drawable.fourseason))
+            rooms.add(DataHotelRoom("Deluxe Room","Rp.2,999,933","Four Season Hotel", "Gatot Subroto, Jakarta","2 Bedroom, 2 Bathroom, 1 Kitchen",R.drawable.fourseason))
+            rooms.add(DataHotelRoom("Regular Room","Rp.2,999,933", "Four Season Hotel", "Gatot Subroto, Jakarta","2 Bedroom, 2 Bathroom, 1 Kitchen",R.drawable.fourseason))
+            rooms.add(DataHotelRoom("Small Room","Rp.2,999,933", "Four Season Hotel", "Gatot Subroto, Jakarta","2 Bedroom, 2 Bathroom, 1 Kitchen",R.drawable.fourseason))
         }else if(selectedHotel?.name == "Asyana Kemayoran"){
-            rooms.add(DataHotelRoom("Deluxe Room","Rp. 287,000","1 Bedroom, 1 Bathroom",R.drawable.asyanakemayoran))
-            rooms.add(DataHotelRoom("Deluxe Room","Rp. 287,000","1 Bedroom, 1 Bathroom",R.drawable.asyanakemayoran))
-            rooms.add(DataHotelRoom("Deluxe Room","Rp. 287,000","1 Bedroom, 1 Bathroom",R.drawable.asyanakemayoran))
+            rooms.add(DataHotelRoom("Deluxe Room","Rp. 287,000", "Asyana Kemayoran", "Kemayoran, Jakarta - City Center","1 Bedroom, 1 Bathroom",R.drawable.asyanakemayoran))
+            rooms.add(DataHotelRoom("Regular Room","Rp. 287,000", "Asyana Kemayoran", "Kemayoran, Jakarta - City Center","1 Bedroom, 1 Bathroom",R.drawable.asyanakemayoran))
+            rooms.add(DataHotelRoom("Small Room","Rp. 287,000", "Asyana Kemayoran", "Kemayoran, Jakarta - City Center","1 Bedroom, 1 Bathroom",R.drawable.asyanakemayoran))
         }else if(selectedHotel?.name == "Aryaduta Menteng"){
-            rooms.add(DataHotelRoom("Deluxe Room","Rp. 732,000","2 Bedroom, 1 Bathroom",R.drawable.aryadutamenteng))
-            rooms.add(DataHotelRoom("Deluxe Room","Rp. 732,000","2 Bedroom, 1 Bathroom",R.drawable.aryadutamenteng))
-            rooms.add(DataHotelRoom("Deluxe Room","Rp. 732,000","2 Bedroom, 1 Bathroom",R.drawable.aryadutamenteng))
+            rooms.add(DataHotelRoom("Deluxe Room","Rp. 732,000", "Four Season Hotel", "Gatot Subroto, Jakarta","2 Bedroom, 1 Bathroom",R.drawable.aryadutamenteng))
+            rooms.add(DataHotelRoom("Deluxe Room","Rp. 732,000", "Four Season Hotel", "Gatot Subroto, Jakarta","2 Bedroom, 1 Bathroom",R.drawable.aryadutamenteng))
+            rooms.add(DataHotelRoom("Deluxe Room","Rp. 732,000","Four Season Hotel", "Gatot Subroto, Jakarta","2 Bedroom, 1 Bathroom",R.drawable.aryadutamenteng))
         }
         return rooms
     }

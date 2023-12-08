@@ -4,8 +4,10 @@ import android.os.Parcel
 import android.os.Parcelable
 
 data class DataHotelRoom(
-    val name: String,
+    val name: String, //Nama Ruangan
     val price: String,
+    val nameHotel: String, //Nama Hotel
+    val location: String, //Lokasi
     val description: String, // Add the description property
     val photo: Int = 0
 ) : Parcelable {
@@ -25,6 +27,8 @@ data class DataHotelRoom(
         parcel.readString() ?: "",
         parcel.readString() ?: "",
         parcel.readString() ?: "",
+        parcel.readString() ?: "",
+        parcel.readString() ?: "",
         parcel.readInt()
     )
 
@@ -37,6 +41,8 @@ data class DataHotelRoom(
     override fun writeToParcel(parcel: Parcel, flags: Int) {
         parcel.writeString(name)
         parcel.writeString(price)
+        parcel.writeString(nameHotel)
+        parcel.writeString(location)
         parcel.writeString(description)
         parcel.writeInt(photo)
     }
