@@ -72,6 +72,7 @@ class HotelDetailActivity : AppCompatActivity() {
                 intent.putExtra("selectedRoomImage", selectedRoom.photo)
                 intent.putExtra("selectedHotelName", selectedRoom.nameHotel)
                 intent.putExtra("selectedHotelLocation", selectedRoom.location)
+                intent.putExtra("selectedHotelRoomPrice", selectedRoom.price)
 
                 // Pass hotel name and location from the selectedHotel
 //                val selectedHotel = intent.getParcelableExtra<DataHotel>("selectedHotel")

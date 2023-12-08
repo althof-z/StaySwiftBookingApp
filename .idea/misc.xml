@@ -3,6 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/AndroidStudio(Project)/StaySwiftBookingApp/app/src/main/res/layout/activity_booking.xml" value="0.1" />
+        <entry key="..\:/AndroidStudio(Project)/StaySwiftBookingApp/app/src/main/res/layout/activity_home.xml" value="0.25" />
+        <entry key="..\:/AndroidStudio(Project)/StaySwiftBookingApp/app/src/main/res/layout/activity_hotel_detail.xml" value="0.1" />
+        <entry key="..\:/AndroidStudio(Project)/StaySwiftBookingApp/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/AndroidStudio(Project)/StaySwiftBookingApp/app/src/main/res/layout/activity_order.xml" value="0.25" />
+        <entry key="..\:/AndroidStudio(Project)/StaySwiftBookingApp/app/src/main/res/layout/order_card.xml" value="0.18" />
         <entry key="..\:/MobileProgramming/HotelBookingApp/Kelompok4/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2435" />
         <entry key="..\:/MobileProgramming/HotelBookingApp/Kelompok4/app/src/main/res/drawable/book_button_bg.xml" value="0.2435" />
         <entry key="..\:/MobileProgramming/HotelBookingApp/Kelompok4/app/src/main/res/drawable/edit_text_border.xml" value="0.2435" />
@@ -63,7 +69,7 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_17_PREVIEW" project-jdk-name="jbr-17" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

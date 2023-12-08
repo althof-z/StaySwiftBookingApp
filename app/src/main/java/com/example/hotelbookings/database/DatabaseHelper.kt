@@ -30,6 +30,9 @@ class DatabaseHelper(context: Context) :
         private const val COLUMN_CHILDREN = "children"
         private const val COLUMN_COMMENTS = "comments"
         private const val COLUMN_USER_ID = "user_id"
+        private const val COLUMN_HOTEL_NAME = "hotel_name"
+        private const val COLUMN_ROOM_TYPE = "room_type"
+        private const val COLUMN_PRICE = "price"
 
     }
 
@@ -45,11 +48,14 @@ class DatabaseHelper(context: Context) :
         // Membuat tabel booking
         val CREATE_BOOKING_TABLE = "CREATE TABLE $TABLE_BOOKING (" +
                 "$COLUMN_BOOKING_ID INTEGER PRIMARY KEY AUTOINCREMENT," +
+                "$COLUMN_HOTEL_NAME TEXT," +
+                "$COLUMN_ROOM_TYPE TEXT," +
                 "$COLUMN_DATE_CHECK_IN TEXT," +
                 "$COLUMN_DATE_CHECK_OUT TEXT," +
                 "$COLUMN_ADULT INTEGER," +
                 "$COLUMN_CHILDREN INTEGER," +
                 "$COLUMN_COMMENTS TEXT," +
+                "$COLUMN_PRICE INTEGER," +
                 "$COLUMN_USER_ID INTEGER," +
                 "FOREIGN KEY($COLUMN_USER_ID) REFERENCES $TABLE_USER($COLUMN_ID))"
         db?.execSQL(CREATE_BOOKING_TABLE)
@@ -124,20 +130,26 @@ class DatabaseHelper(context: Context) :
 
     // Menambahkan data booking ke dalam tabel
     fun addBooking(
+        hotelName: String,
+        roomType: String,
         dateCheckIn: String,
         dateCheckOut: String,
         adult: Int,
         children: Int,
         comments: String,
+        price: Int,
         userId: Long
     ): Long {
         val db = this.writableDatabase
         val contentValues = ContentValues()
+        contentValues.put(COLUMN_HOTEL_NAME, hotelName)
+        contentValues.put(COLUMN_ROOM_TYPE, roomType)
         contentValues.put(COLUMN_DATE_CHECK_IN, dateCheckIn)
         contentValues.put(COLUMN_DATE_CHECK_OUT, dateCheckOut)
         contentValues.put(COLUMN_ADULT, adult)
         contentValues.put(COLUMN_CHILDREN, children)
         contentValues.put(COLUMN_COMMENTS, comments)
+        contentValues.put(COLUMN_PRICE, price)
         contentValues.put(COLUMN_USER_ID, userId)
 
         // Menyimpan data booking ke dalam tabel
@@ -148,47 +160,98 @@ class DatabaseHelper(context: Context) :
     }
 
     // Get booking information for a user
-    fun getBookingInfoByUserId(userId: Long): List<BookingInfo> {
+//    fun getBookingInfoByUserId(userId: Long): List<BookingInfo> {
+//        val db = this.readableDatabase
+//        val columns = arrayOf(
+//            COLUMN_BOOKING_ID,
+//            COLUMN_DATE_CHECK_IN,
+//            COLUMN_DATE_CHECK_OUT,
+//            COLUMN_ADULT,
+//            COLUMN_CHILDREN,
+//            COLUMN_COMMENTS
+//        )
+//        val selection = "$COLUMN_USER_ID = ?"
+//        val selectionArgs = arrayOf(userId.toString())
+//
+//        val cursor: Cursor =
+//            db.query(TABLE_BOOKING, columns, selection, selectionArgs, null, null, null)
+//
+//        val bookingList = mutableListOf<BookingInfo>()
+//
+//        while (cursor.moveToNext()) {
+//            val bookingIdIndex = cursor.getColumnIndex(COLUMN_BOOKING_ID)
+//            val hotelNameIndex = cursor.getColumnIndex(COLUMN_HOTEL_NAME)
+//            val roomTypeIndex = cursor.getColumnIndex(COLUMN_ROOM_TYPE)
+//            val dateCheckInIndex = cursor.getColumnIndex(COLUMN_DATE_CHECK_IN)
+//            val dateCheckOutIndex = cursor.getColumnIndex(COLUMN_DATE_CHECK_OUT)
+//            val adultIndex = cursor.getColumnIndex(COLUMN_ADULT)
+//            val childrenIndex = cursor.getColumnIndex(COLUMN_CHILDREN)
+//            val commentsIndex = cursor.getColumnIndex(COLUMN_COMMENTS)
+//            val priceIndex = cursor.getColumnIndex(COLUMN_PRICE)
+//
+//            val bookingId = cursor.getLong(bookingIdIndex)
+//            val hotelName = cursor.getString(hotelNameIndex)
+//            val roomType = cursor.getString(roomTypeIndex)
+//            val dateCheckIn = cursor.getString(dateCheckInIndex)
+//            val dateCheckOut = cursor.getString(dateCheckOutIndex)
+//            val adult = cursor.getInt(adultIndex)
+//            val children = cursor.getInt(childrenIndex)
+//            val comments = cursor.getString(commentsIndex)
+//            val price = cursor.getInt(priceIndex)
+//
+//            val bookingInfo = BookingInfo(
+//                bookingId, hotelName, roomType,
+//                dateCheckIn, dateCheckOut, adult,
+//                children, comments, price)
+//            bookingList.add(bookingInfo)
+//        }
+//
+//        cursor.close()
+//        db.close()
+//
+//        return bookingList
+//    }
+
+    fun getAllBookingInfo(): List<BookingInfo> {
+        val bookingInfoList = mutableListOf<BookingInfo>()
+        val selectQuery = "SELECT * FROM $TABLE_BOOKING"
+
         val db = this.readableDatabase
-        val columns = arrayOf(
-            COLUMN_BOOKING_ID,
-            COLUMN_DATE_CHECK_IN,
-            COLUMN_DATE_CHECK_OUT,
-            COLUMN_ADULT,
-            COLUMN_CHILDREN,
-            COLUMN_COMMENTS
-        )
-        val selection = "$COLUMN_USER_ID = ?"
-        val selectionArgs = arrayOf(userId.toString())
+        val cursor = db.rawQuery(selectQuery, null)
 
-        val cursor: Cursor =
-            db.query(TABLE_BOOKING, columns, selection, selectionArgs, null, null, null)
+        if (cursor.moveToFirst()) {
+            do {
+                val bookingIdIndex = cursor.getColumnIndex(COLUMN_BOOKING_ID)
+                val hotelNameIndex = cursor.getColumnIndex(COLUMN_HOTEL_NAME)
+                val roomTypeIndex = cursor.getColumnIndex(COLUMN_ROOM_TYPE)
+                val dateCheckInIndex = cursor.getColumnIndex(COLUMN_DATE_CHECK_IN)
+                val dateCheckOutIndex = cursor.getColumnIndex(COLUMN_DATE_CHECK_OUT)
+                val adultIndex = cursor.getColumnIndex(COLUMN_ADULT)
+                val childrenIndex = cursor.getColumnIndex(COLUMN_CHILDREN)
+                val commentsIndex = cursor.getColumnIndex(COLUMN_COMMENTS)
+                val priceIndex = cursor.getColumnIndex(COLUMN_PRICE)
 
-        val bookingList = mutableListOf<BookingInfo>()
+                val bookingId = cursor.getLong(bookingIdIndex)
+                val hotelName = cursor.getString(hotelNameIndex)
+                val roomType = cursor.getString(roomTypeIndex)
+                val dateCheckIn = cursor.getString(dateCheckInIndex)
+                val dateCheckOut = cursor.getString(dateCheckOutIndex)
+                val adult = cursor.getInt(adultIndex)
+                val children = cursor.getInt(childrenIndex)
+                val comments = cursor.getString(commentsIndex)
+                val price = cursor.getInt(priceIndex)
 
-        while (cursor.moveToNext()) {
-            val bookingIdIndex = cursor.getColumnIndex(COLUMN_BOOKING_ID)
-            val dateCheckInIndex = cursor.getColumnIndex(COLUMN_DATE_CHECK_IN)
-            val dateCheckOutIndex = cursor.getColumnIndex(COLUMN_DATE_CHECK_OUT)
-            val adultIndex = cursor.getColumnIndex(COLUMN_ADULT)
-            val childrenIndex = cursor.getColumnIndex(COLUMN_CHILDREN)
-            val commentsIndex = cursor.getColumnIndex(COLUMN_COMMENTS)
-
-            val bookingId = cursor.getLong(bookingIdIndex)
-            val dateCheckIn = cursor.getString(dateCheckInIndex)
-            val dateCheckOut = cursor.getString(dateCheckOutIndex)
-            val adult = cursor.getInt(adultIndex)
-            val children = cursor.getInt(childrenIndex)
-            val comments = cursor.getString(commentsIndex)
-
-            val bookingInfo = BookingInfo(bookingId, dateCheckIn, dateCheckOut, adult, children, comments)
-            bookingList.add(bookingInfo)
+                val bookingInfo = BookingInfo(
+                    bookingId, hotelName, roomType,
+                    dateCheckIn, dateCheckOut, adult,
+                    children, comments, price)
+                bookingInfoList.add(bookingInfo)
+            } while (cursor.moveToNext())
         }
 
         cursor.close()
         db.close()
-
-        return bookingList
+        return bookingInfoList
     }
 
 

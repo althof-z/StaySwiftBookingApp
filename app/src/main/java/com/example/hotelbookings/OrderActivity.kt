@@ -1,12 +1,25 @@
 package com.example.hotelbookings
 
+import DatabaseHelper
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
+import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
+import org.w3c.dom.Text
 
 class OrderActivity : AppCompatActivity() {
+
+    private lateinit var dbHelper: DatabaseHelper
+    private lateinit var bookingId: TextView
+    private lateinit var hotelName: TextView
+    private lateinit var roomType: TextView
+    private lateinit var checkinOut: TextView
+    private lateinit var price: TextView
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_order)
@@ -24,7 +37,27 @@ class OrderActivity : AppCompatActivity() {
             // Handle the back button click
             onBackPressed()
         }
+
+        bookingId = findViewById(R.id.bookingId)
+        hotelName = findViewById(R.id.hotelNameTextView)
+        roomType = findViewById(R.id.roomTypeTextView)
+        checkinOut = findViewById(R.id.checkinOut)
+        price = findViewById(R.id.priceTextView)
+
+        dbHelper = DatabaseHelper(this)
+
+        val allBookingInfo = dbHelper.getAllBookingInfo()
+
+        for (bookingInfo in allBookingInfo) {
+            bookingId.append("ID: ${bookingInfo.bookingId}")
+            hotelName.append("Hotel: ${bookingInfo.hotelName}")
+            roomType.append("Room Type: ${bookingInfo.roomType}")
+            checkinOut.append("Checkin/Out: ${bookingInfo.dateCheckIn} / ${bookingInfo.dateCheckOut}")
+            price.append("Rp.${bookingInfo.price}")
+        }
     }
+
+
 
     private fun showLogoutConfirmationDialog() {
         val builder = AlertDialog.Builder(this)
