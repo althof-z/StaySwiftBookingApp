@@ -120,21 +120,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.403" />
 
-    <View
-        android:id="@+id/borderedTextView7"
-        android:layout_marginTop="15dp"
-        android:layout_width="351dp"
-        android:layout_height="73dp"
-        android:background="@drawable/border_textview"
-        android:fontFamily="@font/rubik_medium"
-        android:padding="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.516"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.708" />
-
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
@@ -342,22 +327,6 @@
         app:layout_constraintTop_toBottomOf="@+id/borderedTextView4"
         app:layout_constraintVertical_bias="1.0" />
 
-    <TextView
-        android:id="@+id/textView20"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Comments"
-        android:textSize="12dp"
-        android:layout_marginTop="15dp"
-        android:textColor="#000000"
-        android:fontFamily="@font/rubik_medium"
-        app:layout_constraintBottom_toTopOf="@+id/borderedTextView7"
-        app:layout_constraintEnd_toEndOf="@+id/borderedTextView7"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/borderedTextView7"
-        app:layout_constraintTop_toBottomOf="@+id/borderedTextView5"
-        app:layout_constraintVertical_bias="1.0" />
-
     <Button
         android:id="@+id/button"
         android:layout_width="350dp"
@@ -371,25 +340,72 @@
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/borderedTextView7"
-        app:layout_constraintVertical_bias="0.648" />
+        app:layout_constraintVertical_bias="0.909" />
+
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/rubik_medium"
+        android:text="Comments"
+        android:textColor="#000000"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/borderedTextView7"
+        app:layout_constraintEnd_toEndOf="@+id/borderedTextView7"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/borderedTextView7"
+        app:layout_constraintTop_toBottomOf="@+id/borderedTextViewName"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <View
+        android:id="@+id/borderedTextView7"
+        android:layout_width="351dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/border_textview"
+        android:fontFamily="@font/rubik_medium"
+        android:padding="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.875" />
 
     <EditText
         android:id="@+id/commentsText"
-        android:layout_width="350dp"
+        android:layout_width="345dp"
         android:layout_height="70dp"
         android:background="@android:color/transparent"
         android:ems="10"
         android:fontFamily="@font/rubik_medium"
+        android:gravity="start|top"
+        android:hint="Your Comment!"
+        android:inputType="textMultiLine"
         android:textColor="#000000"
         android:textSize="12dp"
-        android:gravity="start|top"
-        android:inputType="textMultiLine"
         app:layout_constraintBottom_toBottomOf="@+id/borderedTextView7"
         app:layout_constraintEnd_toEndOf="@+id/borderedTextView7"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/borderedTextView7"
         app:layout_constraintTop_toTopOf="@+id/borderedTextView7"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="1.0" />
+
+    <View
+        android:id="@+id/borderedTextViewName"
+        android:layout_width="351dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/border_textview"
+        android:fontFamily="@font/rubik_medium"
+        android:padding="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.676" />
 
     <EditText
         android:id="@+id/dateCheckIn"
@@ -436,5 +452,22 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.253"
         app:srcCompat="@drawable/ic_arrow_black" />
+
+    <EditText
+        android:id="@+id/textView12"
+        android:layout_width="342dp"
+        android:layout_height="73dp"
+        android:background="@android:color/transparent"
+        android:fontFamily="@font/rubik_medium"
+        android:gravity="center"
+        android:hint="Reserver Name"
+        android:textColor="#000000"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="@+id/borderedTextViewName"
+        app:layout_constraintEnd_toEndOf="@+id/borderedTextViewName"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toStartOf="@+id/borderedTextViewName"
+        app:layout_constraintTop_toTopOf="@+id/borderedTextViewName"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

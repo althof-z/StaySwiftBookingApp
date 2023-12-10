@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.hotelbookings.R
 import com.example.hotelbookings.data.User
 
-class UserAdapter(private val userList: List<User>):
+class UserAdapter(private var userList: List<User>):
     RecyclerView.Adapter<UserAdapter.UserViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UserViewHolder {
@@ -18,11 +18,6 @@ class UserAdapter(private val userList: List<User>):
     }
 
     override fun onBindViewHolder(holder: UserViewHolder, position: Int) {
-        val user = userList[position]
-
-        // Set data pengguna ke dalam views pada card
-        holder.usernameTextView.text = user.username
-        holder.emailTextView.text = user.email
     }
 
     override fun getItemCount(): Int {
@@ -30,8 +25,5 @@ class UserAdapter(private val userList: List<User>):
     }
 
     class UserViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val usernameTextView: TextView = itemView.findViewById(R.id.textView7)
-        val emailTextView: TextView = itemView.findViewById(R.id.textView8)
-        // Tambahkan views lainnya sesuai kebutuhan
     }
 }
